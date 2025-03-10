@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Mágico - Juego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h2 class="level-title">NIVEL <span id="level-number">1</span></h2>
+        <p class="pattern">Patrón: <span id="regex-pattern">^[aeiou]sa$</span></p>
+
+        <div id="options-container" class="options"></div>
+
+        <p class="feedback" id="feedback"></p>
+        <button id="next-level" class="hidden" onclick="nextLevel()">Siguiente Nivel</button>
+
+        <!-- Imágenes de respuesta correcta/incorrecta con efecto de solidez -->
+        <img id="correct-img" class="hidden response-img" src="./assets/img/correcto.png" alt="Correcto">
+        <img id="wrong-img" class="hidden response-img" src="./assets/img/incorrecto.png" alt="Incorrecto">
+
+        <!-- Sonidos -->
+        <audio id="correct-sound" src="./assets/sounds/correct.mp3"></audio>
+        <audio id="wrong-sound" src="./assets/sounds/incorrect.mp3"></audio>
+    </div>
+
+    <script src="src/game.js"></script>
+</body>
+</html>
