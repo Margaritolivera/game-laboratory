@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Laboratorio Mágico</title>
-    <link rel="stylesheet" href="../../style.css"> <!-- Ruta al CSS -->
+    <title>Registro - Laboratorio Mágico</title>
+    <link rel="stylesheet" href="auth.css"> 
 </head>
 <body>
     <div class="game-container">
         <div class="auth-container">
-            <h1>INICIAR SESIÓN</h1>
-            <input type="text" id="username" placeholder="Ingresa tu nombre de usuario" class="input-field">
-            <button class="play-button" onclick="loginUser()">Iniciar sesión</button>
-            <p>¿No tienes una cuenta? <a href="register.html">Regístrate</a></p>
+            <h1 class="title">🧪 Inicia Sesión 🧪</h1>
+            <input type="text" id="username" placeholder="Nombre de usuario" class="input-field">
+            <input type="password" id="password" placeholder="Contraseña" class="input-field">
+            <button class="auth-button" onclick="loginUser()">Iniciar</button>
+            <p>¿Ya tienes una cuenta? <a href="register.html">Registrate</a></p>
         </div>
     </div>
-    <script src="auth.js"></script> <!-- Ruta al JS -->
+
+    <script src="auth.js"></script> 
 </body>
 </html>

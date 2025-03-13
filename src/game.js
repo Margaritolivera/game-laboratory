@@ -28,6 +28,24 @@ const levels = [
 let currentLevel = 0;
 let currentExercise = 0;
 let points = 0; // Puntos del jugador
+let timerInterval;
+
+const TIMER_DURATION = 30;
+
+function startTimer() {
+    let timeLeft = TIMER_DURATION;
+    document.getElementById("timer").innerText = timeLeft;
+
+    timerInterval = setInterval(() => {
+        timeLeft--;
+        document.getElementById("timer").innerText = timeLeft;
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+            alert("Tiempo agotado!");
+            nextLevel();
+        }
+    }, 1000);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     updateGameUI();
@@ -52,6 +70,9 @@ function updateGameUI() {
     document.getElementById("next-level").classList.add("hidden");
     document.getElementById("correct-img").classList.add("hidden");
     document.getElementById("wrong-img").classList.add("hidden");
+
+    clearInterval(timerInterval);
+    startTimer();
 }
 
 function checkAnswer() {
@@ -84,10 +105,9 @@ function checkAnswer() {
 
         // Verifica si se completaron todos los ejercicios del nivel
         if (currentExercise >= levels[currentLevel].length) {
-            // Si se completó el nivel, habilita el botón para avanzar al siguiente nivel
             document.getElementById("next-level").classList.remove("hidden");
+            clearInterval(timerInterval);
         } else {
-            // Si no, actualiza la interfaz para el siguiente ejercicio
             updateGameUI();
         }
     } else {
@@ -103,11 +123,16 @@ function nextLevel() {
     if (currentLevel < levels.length - 1) {
         currentLevel++;
         currentExercise = 0;
-        points = 0; // Reinicia los puntos para el nuevo nivel
-        document.getElementById("points").innerText = points;
         updateGameUI();
     } else {
         alert("¡Felicidades! Has completado todos los niveles.");
         window.location.href = "index.html";
+    }
+}
+
+// Función para salir del juego
+function exitGame() {
+    if (confirm("¿Seguro que deseas salir del juego?")) {
+        window.location.href = "index.html"; // Redirige a la página principal
     }
 }
