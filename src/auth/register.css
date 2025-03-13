@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.game-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 32px;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.auth-button {
+    background: yellow;
+    border: 3px solid black;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px black;
+}
+
+.auth-button:hover {
+    background: orange;
+}
+
+p {
+    margin-top: 20px;
+    color: black;
+}
+
+a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
