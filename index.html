@@ -8,27 +8,44 @@
 </head>
 <body>
     <div class="game-container">
-        <!-- Título y botones -->
-        <div class="content">
-            <h1 class="title">NEW GAME</h1>
-            <button class="play-button" onclick="window.location.href='src/auth/login.html'">INICIAR SESIÓN</button>
-            <button class="play-button" onclick="window.location.href='src/auth/register.html'">REGISTRARSE</button>
+        <!-- Título principal -->
+        <h1 class="title">NEW GAME</h1>
+
+        <!-- Botones de registro e inicio de sesión -->
+        <div class="auth-buttons">
+            <button class="auth-button" onclick="window.location.href='src/auth/login.html'">INICIAR SESIÓN</button>
+            <button class="auth-button" onclick="window.location.href='src/auth/register.html'">REGISTRARSE</button>
         </div>
 
         <!-- Imagen del científico -->
         <img src="./assets/img/cientific.png" class="scientist" alt="Científico">
 
-        <!-- Globo de diálogo del científico -->
-        <div class="scientist-dialog">
-            <p>¡Hola! Necesito que me ayudes a salvar mi laboratorio. Para esto, necesitas aprender sobre expresiones regulares. ¿Estás listo para resolver los desafíos?</p>
+        <!-- Diálogo del científico -->
+        <div class="dialogue-box" id="dialogueBox">
+            <p id="dialogueText">¡Hola! ¿Listo para comenzar?</p>
+            <button class="info-button" onclick="showExplanation()">¿Qué es esto?</button>
         </div>
 
-        <!-- Burbujas decorativas (frascos) -->
+        <!-- Diálogo de explicaciones (oculto inicialmente) -->
+        <div class="dialogue-box hidden" id="explanationBox">
+            <p>Las expresiones regulares son patrones que se usan para buscar combinaciones específicas de caracteres en un texto. Aquí tienes algunos ejemplos:</p>
+            <ul>
+                <li><strong>^</strong>: Indica el inicio de una cadena.</li>
+                <li><strong>$</strong>: Indica el final de una cadena.</li>
+                <li><strong>.*</strong>: Coincide con cualquier carácter (0 o más veces).</li>
+                <li><strong>[aeiou]</strong>: Coincide con cualquier vocal.</li>
+            </ul>
+            <button class="info-button" onclick="hideExplanation()">Cerrar</button>
+        </div>
+
+        <!-- Animación de burbujas -->
         <div class="bubbles">
-            <img src="./assets/img/formula.png" class="bubble bubble-left">
-            <img src="./assets/img/f3.png" class="bubble bubble-left">
-            <img src="./assets/img/f2.png" class="bubble bubble-left">
+            <img src="./assets/img/formula.png" class="bubble">
+            <img src="./assets/img/f3.png" class="bubble">
+            <img src="./assets/img/f2.png" class="bubble">
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -11,12 +11,20 @@
         <h2 class="level-title">NIVEL <span id="level-number">1</span></h2>
         <p class="pattern">Patrón: <span id="regex-pattern">^[aeiou]sa$</span></p>
 
-        <div id="options-container" class="options"></div>
+        <!-- Campo para que el jugador ingrese su respuesta -->
+        <input type="text" id="user-input" placeholder="Escribe tu respuesta aquí">
+        <button id="submit-answer">Enviar respuesta</button>
 
+        <!-- Mensaje de retroalimentación -->
         <p class="feedback" id="feedback"></p>
+
+        <!-- Puntos del jugador -->
+        <p class="points">Puntos: <span id="points">0</span></p>
+
+        <!-- Botón para avanzar de nivel (oculto inicialmente) -->
         <button id="next-level" class="hidden" onclick="nextLevel()">Siguiente Nivel</button>
 
-        <!-- Imágenes de respuesta correcta/incorrecta con efecto de solidez -->
+        <!-- Imágenes de respuesta correcta/incorrecta -->
         <img id="correct-img" class="hidden response-img" src="./assets/img/correcto.png" alt="Correcto">
         <img id="wrong-img" class="hidden response-img" src="./assets/img/incorrecto.png" alt="Incorrecto">
 
@@ -28,29 +36,3 @@
     <script src="src/game.js"></script>
 </body>
 </html>
-
-index.html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboratorio Mágico</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="game-container">
-        <h1 class="title">NEW GAME</h1>
-        <button class="play-button" onclick="startGame()">VAMOS A JUGAR</button>
-        <img src="./assets/img/cientific.png" class="scientist" alt="Científico">
-        <div class="bubbles">
-            <img src="./assets/img/formula.png" class="bubble">
-            <img src="./assets/img/f3.png" class="bubble">
-            <img src="./assets/img/f2.png" class="bubble">
-        </div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
-ahora te paso lo demas 
