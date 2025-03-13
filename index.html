@@ -8,25 +8,20 @@
 </head>
 <body>
     <div class="game-container">
-        <!-- Título principal -->
         <h1 class="title">NEW GAME</h1>
 
-        <!-- Botones de registro e inicio de sesión -->
         <div class="auth-buttons">
             <button class="auth-button" onclick="window.location.href='src/auth/login.html'">INICIAR SESIÓN</button>
             <button class="auth-button" onclick="window.location.href='src/auth/register.html'">REGISTRARSE</button>
         </div>
 
-        <!-- Imagen del científico -->
         <img src="./assets/img/cientific.png" class="scientist" alt="Científico">
 
-        <!-- Diálogo del científico -->
         <div class="dialogue-box" id="dialogueBox">
             <p id="dialogueText">¡Hola! ¿Listo para comenzar?</p>
             <button class="info-button" onclick="showExplanation()">¿Qué es esto?</button>
         </div>
 
-        <!-- Diálogo de explicaciones (oculto inicialmente) -->
         <div class="dialogue-box hidden" id="explanationBox">
             <p>Las expresiones regulares son patrones que se usan para buscar combinaciones específicas de caracteres en un texto. Aquí tienes algunos ejemplos:</p>
             <ul>
@@ -38,7 +33,6 @@
             <button class="info-button" onclick="hideExplanation()">Cerrar</button>
         </div>
 
-        <!-- Animación de burbujas -->
         <div class="bubbles">
             <img src="./assets/img/formula.png" class="bubble">
             <img src="./assets/img/f3.png" class="bubble">
