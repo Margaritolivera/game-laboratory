@@ -8,31 +8,30 @@
 </head>
 <body>
     <div class="game-container">
-        <!-- Botón de salida en la parte superior derecha -->
+       
         <button id="exit-button" onclick="exitGame()">Salir</button>
 
         <p class="timer">Tiempo restante: <span id="timer">30</span> segundos</p>
         <h2 class="level-title">NIVEL <span id="level-number">1</span></h2>
         <p class="pattern">Patrón: <span id="regex-pattern">^[aeiou]sa$</span></p>
 
-        <!-- Campo para que el jugador ingrese su respuesta -->
+       
         <input type="text" id="user-input" placeholder="Escribe tu respuesta aquí">
         <button id="submit-answer">Enviar respuesta</button>
 
-        <!-- Mensaje de retroalimentación -->
         <p class="feedback" id="feedback"></p>
 
-        <!-- Puntos del jugador -->
+       
         <p class="points">Puntos: <span id="points">0</span></p>
 
-        <!-- Botón para avanzar de nivel (oculto inicialmente) -->
+      
         <button id="next-level" class="hidden" onclick="nextLevel()">Siguiente Nivel</button>
 
-        <!-- Imágenes de respuesta correcta/incorrecta -->
+      
         <img id="correct-img" class="hidden response-img" src="./assets/img/correcto.png" alt="Correcto">
         <img id="wrong-img" class="hidden response-img" src="./assets/img/incorrecto.png" alt="Incorrecto">
 
-        <!-- Sonidos -->
+      
         <audio id="correct-sound" src="./assets/sounds/correct.mp3"></audio>
         <audio id="wrong-sound" src="./assets/sounds/incorrect.mp3"></audio>
     </div>
